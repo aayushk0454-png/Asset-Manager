@@ -65,7 +65,7 @@ export default function Home() {
       <Nav />
 
       {/* HERO SECTION */}
-      <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-32 pb-16 gap-y-2">
         <motion.div 
           style={{ scale: heroScale, opacity: heroOpacity }}
           className="absolute inset-0 z-0"
@@ -96,7 +96,7 @@ export default function Home() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-            className="w-32 h-32 md:w-48 md:h-48 rounded-full mb-12 gold-shimmer"
+            className="w-[13vh] h-[13vh] min-w-16 min-h-16 max-w-48 max-h-48 rounded-full mb-3 sm:mb-6 md:mb-10 gold-shimmer"
           >
             <img 
               src="/assets/velmont-logo.png" 
