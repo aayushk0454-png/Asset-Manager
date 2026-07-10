@@ -3,6 +3,7 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { NotifyMeForm } from "@/components/notify-form";
+import { Countdown } from "@/components/countdown";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
@@ -226,6 +227,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PRODUCT SHOWCASE SECTION */}
+      <section id="collection" className="py-32 px-6 md:px-12 bg-secondary/20 border-y border-border/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="font-sans text-xs tracking-[0.3em] uppercase text-primary mb-4">Preview</p>
+            <h2 className="font-serif text-4xl md:text-5xl mb-6">The Collection</h2>
+            <div className="w-px h-12 bg-primary mx-auto" />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {[
+              { src: "/assets/products/product-01.jpg", label: "Wide-Leg Denim" },
+              { src: "/assets/products/product-02.jpg", label: "Striped Oxford" },
+              { src: "/assets/products/product-03.jpg", label: "Overshirt" },
+              { src: "/assets/products/product-04.jpg", label: "Graphic Layer Tee" },
+              { src: "/assets/products/product-05.jpg", label: "Tailored Trouser" },
+              { src: "/assets/products/product-06.png", label: "Washed Graphic Tee" },
+              { src: "/assets/products/product-07.jpg", label: "Printed Shirt" },
+              { src: "/assets/products/product-08.jpg", label: "Relaxed Denim" },
+              { src: "/assets/products/product-09.jpg", label: "Motif Tee" },
+              { src: "/assets/products/product-10.jpg", label: "Gingham Shirt" },
+              { src: "/assets/products/product-11.jpg", label: "Court Sneaker" },
+              { src: "/assets/products/product-12.jpg", label: "Structured Cap" },
+            ].map((item, i) => (
+              <motion.div
+                key={item.src}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: (i % 4) * 0.1 }}
+                className="relative aspect-[3/4] overflow-hidden bg-secondary/40 group"
+              >
+                <img
+                  src={item.src}
+                  alt={item.label}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <p className="absolute bottom-4 left-4 right-4 font-sans text-[10px] md:text-xs tracking-widest uppercase text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
+                  {item.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TEAM SECTION */}
       <section id="team" className="py-32 px-6 md:px-12 bg-secondary/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -276,22 +324,7 @@ export default function Home() {
             <p className="font-sans text-xs tracking-[0.3em] uppercase text-primary mb-6">Kishanganj, Bihar</p>
             <h2 className="font-serif text-5xl md:text-7xl mb-8">Launching Soon</h2>
             
-            <div className="flex justify-center gap-4 md:gap-8 mb-12 opacity-50 font-serif text-3xl md:text-4xl">
-              <div className="flex flex-col items-center">
-                <span>00</span>
-                <span className="font-sans text-[10px] tracking-widest uppercase mt-2">Days</span>
-              </div>
-              <span>:</span>
-              <div className="flex flex-col items-center">
-                <span>00</span>
-                <span className="font-sans text-[10px] tracking-widest uppercase mt-2">Hrs</span>
-              </div>
-              <span>:</span>
-              <div className="flex flex-col items-center">
-                <span>00</span>
-                <span className="font-sans text-[10px] tracking-widest uppercase mt-2">Min</span>
-              </div>
-            </div>
+            <Countdown />
 
             <p className="text-muted-foreground font-light text-lg leading-relaxed mb-12 max-w-xl mx-auto">
               VELMONT is preparing to introduce a new standard of premium streetwear. Stay connected and be among the first to experience our launch.

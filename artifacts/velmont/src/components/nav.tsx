@@ -31,6 +31,7 @@ export default function Nav() {
           <button onClick={() => scrollTo("home")} className="hover:text-primary transition-colors">Home</button>
           <button onClick={() => scrollTo("about")} className="hover:text-primary transition-colors">About</button>
           <button onClick={() => scrollTo("philosophy")} className="hover:text-primary transition-colors">Philosophy</button>
+          <button onClick={() => scrollTo("collection")} className="hover:text-primary transition-colors">Collection</button>
         </div>
       </div>
 
