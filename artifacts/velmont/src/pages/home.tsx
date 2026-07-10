@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -9,13 +9,49 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" ? window.matchMedia("(max-width: 768px)").matches : false
+  );
+  const [reducedMotion, setReducedMotion] = useState(() =>
+    typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false
+  );
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
 
-  const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 1.05]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  // Disable the parallax scale/opacity transform on small screens and for
+  // users who prefer reduced motion — recalculating transforms on scroll is
+  // the biggest source of jank on lower-powered mobile devices.
+  const heroScale = useTransform(scrollYProgress, [0, 0.2], isMobile || reducedMotion ? [1, 1] : [1, 1.05]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], reducedMotion ? [1, 1] : [1, 0]);
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 768px)");
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setIsMobile(mobileQuery.matches);
+    setReducedMotion(motionQuery.matches);
+    const handleMobile = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    const handleMotion = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    mobileQuery.addEventListener("change", handleMobile);
+    motionQuery.addEventListener("change", handleMotion);
+    return () => {
+      mobileQuery.removeEventListener("change", handleMobile);
+      motionQuery.removeEventListener("change", handleMotion);
+    };
+  }, []);
+
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+    if (reducedMotion) {
+      video.pause();
+    } else {
+      video.play().catch(() => {});
+    }
+  }, [reducedMotion]);
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -34,11 +70,26 @@ export default function Home() {
           style={{ scale: heroScale, opacity: heroOpacity }}
           className="absolute inset-0 z-0"
         >
-          {/* Background image generated via prompt */}
+          {/* Background: still image first paint, video layered on top once ready */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity"
             style={{ backgroundImage: `url('/assets/hero-bg.jpg')` }}
           />
+          {!reducedMotion && (
+            <video
+              ref={heroVideoRef}
+              className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
+              src="/assets/video/hero-film.mp4"
+              poster="/assets/hero-bg.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              controls={false}
+              aria-hidden="true"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10" />
         </motion.div>
 
