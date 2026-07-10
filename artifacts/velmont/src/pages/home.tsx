@@ -75,21 +75,19 @@ export default function Home() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity"
             style={{ backgroundImage: `url('/assets/hero-bg.jpg')` }}
           />
-          {!reducedMotion && (
-            <video
-              ref={heroVideoRef}
-              className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
-              src="/assets/video/hero-film.mp4"
-              poster="/assets/hero-bg.jpg"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              controls={false}
-              aria-hidden="true"
-            />
-          )}
+          <video
+            ref={heroVideoRef}
+            className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
+            src="/assets/video/hero-film.mp4"
+            poster="/assets/hero-bg.jpg"
+            autoPlay={!reducedMotion}
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            controls={false}
+            aria-hidden="true"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10" />
         </motion.div>
 
