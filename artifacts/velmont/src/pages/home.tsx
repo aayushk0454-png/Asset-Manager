@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { NotifyMeForm } from "@/components/notify-form";
 import { Countdown } from "@/components/countdown";
+import { BrandFilm } from "@/components/brand-film";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
@@ -273,6 +274,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* BRAND FILM SECTION */}
+      <BrandFilm />
 
       {/* TEAM SECTION */}
       <section id="team" className="py-32 px-6 md:px-12 bg-secondary/20">
