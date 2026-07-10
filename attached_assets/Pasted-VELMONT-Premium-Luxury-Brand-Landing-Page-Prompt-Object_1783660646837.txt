@@ -1,0 +1,290 @@
+VELMONT — Premium Luxury Brand Landing Page Prompt
+Objective
+
+Design a world-class premium landing page for VELMONT, a modern luxury streetwear brand. This is not an e-commerce website. It is a premium company showcase and brand introduction page announcing the upcoming launch.
+
+The design should immediately communicate exclusivity, confidence, elegance, and premium craftsmanship. Every section should feel cinematic, modern, and luxurious.
+
+The overall experience should resemble the websites of luxury fashion houses, using minimalist layouts, editorial typography, immersive animations, and subtle 3D interactions.
+
+Brand Identity
+
+VELMONT represents modern luxury streetwear.
+
+Minimal.
+
+Confident.
+
+Timeless.
+
+Premium.
+
+Sophisticated.
+
+Quiet Luxury.
+
+Every animation, transition, and interaction should feel refined and expensive.
+
+Avoid anything that feels flashy, colorful, cluttered, or template-based.
+
+Color Palette
+
+Primary Background:
+Matte Black (#070707)
+
+Secondary Background:
+Charcoal (#111111)
+
+Accent Color:
+Champagne Gold (#D8BE8B)
+
+Hover Accent:
+Soft Metallic Gold (#E8D2A8)
+
+Primary Text:
+Warm White (#F5F2ED)
+
+Secondary Text:
+Soft Gray (#A8A8A8)
+
+Borders:
+Thin transparent champagne-gold strokes.
+
+Typography
+
+Headings:
+Elegant luxury serif font.
+
+Body:
+Modern minimalist sans-serif.
+
+Large spacing, clean hierarchy, premium editorial layout.
+
+Hero Section
+
+Use the uploaded luxury fashion background video as a full-screen hero with a subtle dark overlay.
+
+Display the uploaded VELMONT logo prominently with a gentle metallic shimmer animation.
+
+Main Heading:
+
+VELMONT
+
+Subheading:
+
+Luxury Streetwear. Timeless Confidence.
+
+Announcement Badge:
+
+Launching Soon in Kishanganj
+
+Description:
+
+"Crafted for those who appreciate premium oversized essentials, exceptional quality, and timeless minimalism."
+
+Primary Button:
+
+Explore Our Vision
+
+Secondary Button:
+
+Contact Us
+
+Use smooth fade-ins, cinematic parallax, and elegant scroll cues.
+
+Dynamic Background
+
+The background should feel alive without distracting users.
+
+Include:
+
+Soft floating particles
+Volumetric light rays
+Gentle gradient movement
+Subtle reflections
+Smooth parallax
+Cinematic ambient lighting
+
+No excessive visual effects.
+
+About VELMONT
+
+Large editorial section introducing the brand.
+
+Heading:
+
+Crafted for Modern Luxury
+
+Text:
+
+"VELMONT is built around the philosophy that luxury is found in quality, simplicity, and confidence. Every oversized silhouette reflects timeless design, premium craftsmanship, and modern elegance."
+
+Display premium lifestyle imagery and the provided clothing photographs in a clean editorial grid.
+
+Brand Philosophy
+
+Three elegant feature cards with subtle glassmorphism and hover animations.
+
+Premium Quality
+
+Heavyweight fabrics and meticulous craftsmanship.
+
+Modern Minimalism
+
+Clean silhouettes designed for everyday confidence.
+
+Timeless Style
+
+Fashion that remains relevant beyond trends.
+
+Founder Section
+
+Elegant editorial layout.
+
+Heading:
+
+The People Behind VELMONT
+
+Founder
+
+Aayush Kumar Yadav
+
+Co-Founders
+
+Abhay Kumar
+
+Aditya Kumar
+
+Display names in a premium layout with subtle reveal animations. Do not use exaggerated portraits or corporate styling.
+
+Delivery Information
+
+Minimal luxury information card.
+
+Heading:
+
+Fast & Reliable Delivery
+
+Text:
+
+Orders will be delivered within 2–3 business days after dispatch.
+
+Use a premium shipping icon with elegant hover animation.
+
+Coming Soon Section
+
+Large cinematic section.
+
+Heading:
+
+Launching Soon
+
+Subheading:
+
+Kishanganj, Bihar
+
+Text:
+
+"VELMONT is preparing to introduce a new standard of premium streetwear. Stay connected and be among the first to experience our launch."
+
+Include a subtle countdown animation placeholder (without fake dates) and a Notify Me button.
+
+Clothing Showcase
+
+Use the uploaded clothing photographs throughout the page.
+
+Present oversized T-shirts, baggy jeans, sneakers, and caps in large editorial layouts.
+
+Apply:
+
+Smooth hover zoom
+3D tilt
+Soft lighting
+Floating cards
+Premium shadows
+Slow fade animations
+
+The products should feel like part of a luxury fashion campaign rather than a catalog.
+
+Logo Animation
+
+Animate the VELMONT logo with:
+
+Soft metallic shimmer
+Gentle scale reveal
+Fade from darkness
+Elegant gold reflections
+
+Avoid flashy or exaggerated effects.
+
+Navigation
+
+Minimal floating navigation with glass blur.
+
+Links:
+
+Home
+About
+Philosophy
+Team
+Launch
+Contact
+
+Navbar becomes slightly smaller while scrolling.
+
+Animations
+
+Use premium GSAP/Framer Motion style animations.
+
+Include:
+
+Smooth page transitions
+Scroll reveal
+Fade-up animations
+Gentle scaling
+3D hover interactions
+Mouse parallax
+Floating elements
+Soft blur transitions
+Physics-based easing
+
+All animations should feel smooth, luxurious, and subtle.
+
+Footer
+
+Minimal matte black footer.
+
+Display:
+
+VELMONT
+
+Luxury Streetwear
+
+Launching Soon in Kishanganj, Bihar
+
+Founder: Aayush Kumar Yadav
+
+Co-Founders: Abhay Kumar • Aditya Kumar
+
+Delivery: 2–3 Business Days
+
+© VELMONT — All Rights Reserved.
+
+Include minimal social media icons and a subtle gold divider.
+
+Technical Requirements
+Fully responsive (Desktop, Tablet, Mobile)
+4K-ready visuals
+Dark luxury theme
+Smooth scrolling
+Optimized performance
+SEO-friendly structure
+Accessible design
+High-quality micro-interactions
+Premium loading animation
+No unnecessary pop-ups
+No e-commerce functionality
+No shopping cart or checkout
+Overall Feel
+
+The finished landing page should feel like the digital identity of a global luxury fashion brand preparing for launch. It should emphasize exclusivity, craftsmanship, and anticipation through elegant typography, cinematic visuals, minimalist design, black-and-champagne-gold branding inspired by the VELMONT logo, and subtle 3D interactions. The goal is to leave visitors with the impression that VELMONT is a premium brand worth waiting for, while clearly communicating that it is Launching Soon in Kishanganj, Bihar.
