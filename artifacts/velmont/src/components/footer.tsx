@@ -14,7 +14,7 @@ export default function Footer() {
               Launching Soon in Kishanganj, Bihar.
             </p>
             <div className="flex items-center space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
+              <a href="https://www.instagram.com/velmont__2026?utm_source=qr&igsh=eXh6aWlzYm85Z3cx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
                 <Instagram size={18} strokeWidth={1.5} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">

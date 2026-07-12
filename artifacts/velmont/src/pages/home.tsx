@@ -70,25 +70,20 @@ export default function Home() {
           style={{ scale: heroScale, opacity: heroOpacity }}
           className="absolute inset-0 z-0"
         >
-          {/* Background: still image first paint, video layered on top once ready */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity"
-            style={{ backgroundImage: `url('/assets/hero-bg.jpg')` }}
-          />
+          {/* Hero video — full colour, no blend, dark gradient keeps text legible */}
           <video
             ref={heroVideoRef}
-            className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
+            className="absolute inset-0 w-full h-full object-cover"
             src="/assets/video/hero-film.mp4"
-            poster="/assets/hero-bg.jpg"
             autoPlay={!reducedMotion}
             loop
             muted
             playsInline
-            preload="metadata"
+            preload="auto"
             controls={false}
             aria-hidden="true"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 z-10" />
         </motion.div>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
