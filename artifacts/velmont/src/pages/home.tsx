@@ -45,12 +45,27 @@ export default function Home() {
 
   useEffect(() => {
     const video = heroVideoRef.current;
-    if (!video) return;
-    if (reducedMotion) {
+    if (!video || reducedMotion) return;
+
+    // Try autoplay immediately (works on deployed site + mobile)
+    video.play().catch(() => {
+      // Desktop iframe blocks autoplay — play on first user interaction instead
+      const unlockPlay = () => {
+        video.play().catch(() => {});
+        window.removeEventListener("scroll", unlockPlay);
+        window.removeEventListener("click", unlockPlay);
+        window.removeEventListener("touchstart", unlockPlay);
+        window.removeEventListener("keydown", unlockPlay);
+      };
+      window.addEventListener("scroll", unlockPlay, { passive: true });
+      window.addEventListener("click", unlockPlay);
+      window.addEventListener("touchstart", unlockPlay, { passive: true });
+      window.addEventListener("keydown", unlockPlay);
+    });
+
+    return () => {
       video.pause();
-    } else {
-      video.play().catch(() => {});
-    }
+    };
   }, [reducedMotion]);
 
   const scrollTo = (id: string) => {
